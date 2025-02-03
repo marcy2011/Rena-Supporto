@@ -1,18 +1,91 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <title>Rena Supporto</title>
+    <title id="page-title">Rena Supporto - Segnala bug</title>
     <link rel="icon" type="image/x-icon" href="icon.jpg">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
-    <meta property="og:title" content="Rena Supporto">
-    <meta property="og:description" content="Contatta l'assistenza di Rena">
-    <meta property="og:image" content="icon.jpg">
-    <meta property="og:url" content="renasupporto.altervista.org">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styleshit.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <style>
+        a, button {
+    cursor: url('cursore.png'), pointer;
+    }
+    
+    body {
+    cursor: url('cursore.png'), pointer;
+    }
+    </style>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Open Sauce', sans-serif;
+        }
+
+        .header-nav-link {
+            color: white !important;
+        }
+    
+        .header-nav-item {
+            display: inline-block;
+            margin-right: 10px;
+            position: relative;
+        }
+
+        .header-nav-link {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            transition: font-size 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-nav-item:hover .header-nav-link {
+            font-size: 12px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .page-header {
+            display: flex;
+            align-items: center;
+        }
+        .page-header {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Nascondi il menu di navigazione su dispositivi mobili */
+        @media screen and (max-width: 767px) {
+            .header-nav {
+                display: none;
+            }
+            
+.header-logo {
+    width: 50px;
+    position: absolute; 
+    top: 0;      
+    left: 0;      
+}
+
+.menu-icon {
+    width: 50px;
+    position: absolute; 
+    top: 0;      
+    right: 0;      
+    margin-top: 30px;  
+}
+        }
+
+        /* Nascondi l'icona del menu su schermi più grandi */
+        @media screen and (min-width: 768px) {
+            .menu-icon {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="page-header">
@@ -23,63 +96,6 @@
                 </svg>
             </a>
         </div>
-        <!-- Mostra solo su dispositivi mobili -->
-        <div class="header-nav">
-            <ul class="nav">
-                <li class="header-nav-item"><a class="header-nav-link ripple ripple-dark" href="index.html">Home</a></li>
-                <li class="header-nav-item"><a class="header-nav-link ripple ripple-dark" href="segnala-bug.html">Segnala Bug</a></li>
-                <li class="header-nav-item"><a class="header-nav-link ripple ripple-dark" href="info.html">Info</a></li>
-            </ul>
-        </div>
-        <!-- Mostra solo su dispositivi mobili -->
-        <a href="https://renasupporto.altervista.org/menu.html">
-            <img src="https://gamecloudservices.altervista.org/menuaperto.png" alt="Menu" class="menu-icon">
-        </a>
-       
-        <div id="custom-menu">
-            <ul>
-                <li><a href="index.html"><img src="https://gcsapp.altervista.org/homebanner.png" alt="Image 1" width="20"><span>Home</span></a></li>
-                <li><a href="segnala-bug.html"><img src="bug.png" alt="Image 3" width="22"><span>Segnala Bug</span></a></li>
-                <li><a href="info.html"><img src="https://gcsapp.altervista.org/accountbanner.png" alt="Image 2" width="18"><span>Info</span></a></li>
-            </ul>
-        </div>
-
-        <style>
-            #custom-menu {
-                display: none;
-                position: absolute;
-                background-color: rgba(0, 0, 0, 0.8);
-                border-radius: 10px;
-                padding: 10px;
-                backdrop-filter: blur(5px);
-            }
-            
-            #custom-menu ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-            
-            #custom-menu ul li {
-                margin-bottom: 10px;
-            }
-            
-            #custom-menu ul li a {
-                display: flex;
-                align-items: center;
-                color: #fff;
-                text-decoration: none;
-            }
-            
-            #custom-menu ul li a img {
-                margin-right: 10px;
-                border-radius: 5px;
-            }
-            
-            #custom-menu ul li a span {
-                font-size: 16px;
-            }
-        </style>
         <script>
             document.addEventListener('contextmenu', function(event) {
                 event.preventDefault();
@@ -115,82 +131,114 @@
             }
         </script>
         <style>
-            ::selection {
-                background-color: white;
-                color: black;
-            }
+                .header-logo img {
+            transition: transform 0.3s ease;
+        }
+
+        .header-logo:hover img {
+            transform: translateY(-5px);
+        }
         </style>
-        
-            <style>
-                body {
-                    background-color: black;
-                    color: white;
-                    font-family: 'Open Sauce', sans-serif;
-                }
+        <!-- Mostra solo su dispositivi mobili -->
+        <div class="header-nav">
+            <ul class="nav">
+                <li class="header-nav-item"><a class="header-nav-link ripple ripple-dark" href="index.html">Home</a></li>
+                <li class="header-nav-item"><a class="header-nav-link ripple ripple-dark" href="segnala-bug.html">Segnala Bug</a></li>
+            </ul>
+        </div>
+        <!-- Mostra solo su dispositivi mobili -->
+        <a href="https://renasupporto.altervista.org/menu.html">
+            <img src="https://gamecloudservices.altervista.org/menuaperto.png" alt="Menu" class="menu-icon">
+        </a>
+  
+<style>
+#custom-menu {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 10px;
+  backdrop-filter: blur(5px); 
+}
 
-                .header-nav-link {
-                    color: white !important;
-                }
-            
-                .header-nav-item {
-                    display: inline-block;
-                    margin-right: 10px;
-                    position: relative;
-                }
+#custom-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-                .header-nav-link {
-                    text-decoration: none;
-                    color: #333;
-                    font-size: 16px;
-                    transition: font-size 0.3s ease, box-shadow 0.3s ease;
-                    position: relative;
-                    z-index: 1;
-                }
+#custom-menu ul li {
+  margin-bottom: 10px;
+}
 
-                .header-nav-item:hover .header-nav-link {
-                    font-size: 12px;
-                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-                }
+#custom-menu ul li a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+}
 
-                .page-header {
-                    display: flex;
-                    align-items: center;
-                }
+#custom-menu ul li a img {
+  margin-right: 10px;
+  border-radius: 5px;
+}
 
-                .header-logo {
-                    margin-right: 10px;
-                }
+#custom-menu ul li a span {
+  font-size: 16px;
+}
+</style>
+<script>
+document.addEventListener('contextmenu', function(event) {
+  event.preventDefault();
+  if (window.innerWidth > 768) { 
+    var customMenu = document.getElementById('custom-menu');
+    customMenu.style.display = 'block';
+    customMenu.style.left = event.pageX + 'px';
+    customMenu.style.top = event.pageY + 'px';
+  }
+});
 
-                /* Nascondi il menu di navigazione su dispositivi mobili */
-                @media screen and (max-width: 767px) {
-                    .header-nav {
-                        display: none;
-                    }
-                    
-                    .menu-icon {
-                        width: 50px;
-                        margin-left: 220px;
-                        margin-top: 30px;
-                    }
-                }
+document.addEventListener('click', function(event) {
+  var customMenu = document.getElementById('custom-menu');
+  customMenu.style.display = 'none';
+});
 
-                /* Nascondi l'icona del menu su schermi più grandi */
-                @media screen and (min-width: 768px) {
-                    .menu-icon {
-                        display: none;
-                    }
-                }
-            </style>
+</script>
+<style>
+    ::selection {
+        background-color: white;
+        color: black;
+    }
+</style>
+ <style>
+*:focus {
+  outline: none;
+}
+
+button:focus, 
+input:focus, 
+textarea:focus {
+  outline: none;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+</style>
+        <div id="custom-menu">
+            <ul>
+                <li><a href="index.html"><img src="https://gcsapp.altervista.org/homebanner.png" alt="Image 1" width="20"><span>Home</span></a></li>
+                <li><a href="segnala-bug.html"><img src="bug.png" alt="Image 3" width="22"><span>Segnala Bug</span></a></li>
+                <li><a href="info.html"><img src="https://gcsapp.altervista.org/accountbanner.png" alt="Image 2" width="18"><span>Info</span></a></li>
+            </ul>
+        </div>
     </header>
 
 <a href="https://t.me/BugRena_bot">
-  <img class="image-destra" src="bugse.png" alt="">
+  <img class="image-destra" src="bugseg.png" alt="">
 </a>
 <main>
-  <h1>Invia i bug che trovi al bot Telegram</h1>
-  <a href="https://t.me/BugRena_bot">
-    <button>Apri il bot</button>
-  </a>
+<iframe id="myIframe" src="https://renasupporto.altervista.org/formbug.html" scrolling="auto"></iframe>
 </main>
 
   <style>
@@ -210,28 +258,17 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: center;
-      margin-top: 20px;
+      width: 100%;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 0 15px;
     }
 
-    main h1 {
-      font-size: 40px;
-    }
-
-    main button {
-      background-color: #1a48aa;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 15px;
-      border: 2px solid black;
-      transition: all 0.3s ease;
-      margin-top: 20px;
-    }
-
-    main button:hover {
-      background-color: black;
-      color: white;
-      padding: 8px 18px;
+    iframe {
+      width: 100%;
+      min-height: 120vh;
+      border: none;
+      overflow: hidden;
     }
 
     @media (min-width: 768px) {
@@ -245,14 +282,24 @@
 
       main {
         float: right;
-        width: 554px;
-        height: 554px;
+        width: 700px;
+        margin-right: 5%;
       }
     }
 
     @media (max-width: 767px) {
       main {
-        margin-top: 0;
+        float: none;
+        margin: 20px auto;
+        width: 90%;
+      }
+      
+      iframe {
+        width: 100%;
+      }
+      
+      .image-destra {
+        margin-bottom: 20px;
       }
     }
   </style>
@@ -267,3 +314,33 @@
 </script>
 <noscript><a href="https://www.livechat.com/chat-with/18152529/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechat.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
 <!-- End of LiveChat code -->
+
+     <style>
+ /* Rimuovere il contorno su tutti gli elementi quando vengono selezionati */
+*:focus {
+  outline: none;
+}
+
+/* Rimuovere il contorno su specifici elementi quando vengono selezionati */
+button:focus, 
+input:focus, 
+textarea:focus {
+  outline: none;
+}
+
+/* Disabilitare l'effetto di selezione sui dispositivi touch */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+</style>
+        <style>
+                .header-logo img {
+            transition: transform 0.3s ease;
+        }
+
+        .header-logo:hover img {
+            transform: translateY(-5px);
+        }
+        </style>
+</body>
+</html>
