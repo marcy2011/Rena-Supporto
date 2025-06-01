@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://renasupporto.altervista.org/icon.png" alt="logo" width="90" style="border-radius: 20px;">
+</p>
+
 # Rena Supporto
 Sito di supporto di Rena
 # Vai al sito su https://renasupporto.altervista.org
